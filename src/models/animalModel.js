@@ -17,6 +17,6 @@ const animalSchema = new mongoose.Schema({
         default: true,
     },
 });
-module.exports = Router;
+module.exports = mongoose.model("Animal", animalSchema);
 
 
