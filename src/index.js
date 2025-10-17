@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const animalRoutes = require("./routes/animal");
+const authRoutes = require("./routes/authentication");
 const mongoose = require("mongoose");
 require('dotenv').config();
 
@@ -11,6 +12,7 @@ app.use(express.json()); // transforma los datos a formato JSON
 
 // ✅ Rutas
 app.use("/api", animalRoutes);
+app.use("/api", authRoutes);
 
 // ✅ Conexión a la base de datos
 mongoose
